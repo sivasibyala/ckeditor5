@@ -1,0 +1,9 @@
+<div [formGroup]="form">
+        <ckeditor formControlName="editorData" class="form-control" [disabled]="isDisabled" [editor]="Editor" (ready)="onReady($event)">
+        </ckeditor>
+        <button (click)="toggleDisabled()">
+            {{ isDisabled ? 'Enable editor' : 'Disable editor' }}
+        </button>
+        <button (click)="onSubmit()">Submit</button>
+   </div>
+<router-outlet></router-outlet>
